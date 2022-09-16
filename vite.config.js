@@ -1,19 +1,19 @@
-import { resolve } from 'path'
+import {resolve} from 'path'
 import pkg from './package.json'
 import vue from '@vitejs/plugin-vue'
 // vue-jsx 插件说明 https://github.com/vuejs/jsx-next/blob/dev/packages/babel-plugin-jsx/README-zh_CN.md
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { svgLoader } from './src/utils/svg-loader.js'
+import {svgLoader} from './src/utils/svg-loader.js'
 
-const { dependencies, devDependencies, name, version } = pkg
+const {dependencies, devDependencies, name, version} = pkg
 
 const __APP_INFO__ = {
-  pkg: { dependencies, devDependencies, name, version },
+  pkg: {dependencies, devDependencies, name, version},
   lastBuildTime: new Date().toLocaleString()
 }
 
 // 官方文档 https://cn.vitejs.dev/config/
-export default ({ command }) => {
+export default ({command}) => {
   return {
     base: './',
 

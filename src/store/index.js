@@ -1,5 +1,5 @@
-import { createStore } from 'vuex'
-import { getThemes } from 'utils/storage'
+import {createStore} from 'vuex'
+import {getThemes} from 'utils/storage'
 
 const navbarType = getThemes()?.navbarType ?? '左侧菜单模式'
 export default createStore({

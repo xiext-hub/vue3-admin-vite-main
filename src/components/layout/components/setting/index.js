@@ -1,4 +1,4 @@
-import { setThemes, getThemes } from 'utils/storage'
+import {setThemes, getThemes} from 'utils/storage'
 // 定义变量
 export const _data = {
   drawer: false,
@@ -49,9 +49,9 @@ export const _data = {
 
 // 主题切换
 export const _changeSetting = (params) => {
-  let { type, value, store, data } = params
+  let {type, value, store, data} = params
   data[type] = value
-  settingThemes({ type, value })
+  settingThemes({type, value})
   if (type === 'navbarType') {
     data.drawer = false
     store.commit('getNavbarType', value)
@@ -60,7 +60,7 @@ export const _changeSetting = (params) => {
 
 // 设置主题并暂存缓存
 const settingThemes = (params) => {
-  const { type, value } = params
+  const {type, value} = params
   let themes = getThemes()
   themes[type] = value
   setThemes(themes)
@@ -71,7 +71,7 @@ const settingThemes = (params) => {
 export const _getThemes = (params) => {
   let themes = getThemes()
   if (params) {
-    let { data } = params
+    let {data} = params
     Object.keys(data).forEach((key) => {
       data[key] = themes[key] || data[key]
     })
@@ -124,7 +124,7 @@ export const _getThemes = (params) => {
 
 // 添加移除class
 const toggleClass = (params) => {
-  let { flag, cls, dom } = params
+  let {flag, cls, dom} = params
   dom = dom || 'body'
   let classList = document.querySelector(dom)?.classList
   flag ? classList?.add(cls) : classList?.remove(cls)

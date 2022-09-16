@@ -1,7 +1,9 @@
 @import './themes.scss';
+
 :root {
   --el-color-primary: var(--systemThemeColor);
 }
+
 .el-button--default {
   --el-button-font-color: #ffffff;
   --el-button-background-color: var(--systemThemeColor);
@@ -10,6 +12,7 @@
   --el-button-active-font-color: #e6e6e6;
   --el-button-active-background-color: var(--systemThemeColor);
   --el-button-active-border-color: var(--systemThemeColor);
+
   &:hover,
   &:focus {
     background-color: var(--systemThemeColor);
@@ -17,15 +20,18 @@
     border-color: var(--systemThemeColor);
   }
 }
+
 // ----------自定义switch----------
 .custom-switch {
   --before-text: '\5f00';
   --after-text: '\5173';
   $beforeText: var(--before-text);
   $afterText: var(--after-text);
+
   .el-switch__core {
     position: relative;
   }
+
   &:not(.is-checked) .el-switch__core {
     &::after {
       content: $afterText;
@@ -36,6 +42,7 @@
       color: #fff;
     }
   }
+
   &.is-checked .el-switch__core {
     &::before {
       content: $beforeText;
@@ -47,12 +54,14 @@
     }
   }
 }
+
 // ----------END-----------
 
 // ----------自定义card----------
 .el-card {
   --el-card-border-radius: 2px;
   --el-card-padding: 12px;
+
   .el-card__header {
     padding: 0 var(--el-card-padding);
     font-size: 0.875rem;
@@ -62,6 +71,7 @@
     justify-content: space-between;
   }
 }
+
 // ----------END-----------
 .el-row.justify-between {
   margin-left: var(--gutter) !important;
@@ -70,16 +80,20 @@
 
 .night-mode {
   $itemColor: #151515;
+
   .el-drawer {
     --el-drawer-background-color: #151515;
   }
+
   .el-divider__text {
     background-color: var(--el-drawer-background-color);
     color: inherit;
   }
+
   .el-switch__label:not(.is-active) {
     color: $navbarColor;
   }
+
   .el-card {
     background-color: $itemColor;
     color: $navbarColor;

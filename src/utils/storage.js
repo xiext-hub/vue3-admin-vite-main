@@ -24,9 +24,9 @@ export const getThemes = () => {
   result = result
     ? JSON.parse(result)
     : {
-        showBreadcrumb: true,
-        showTabs: true
-      }
+      showBreadcrumb: true,
+      showTabs: true
+    }
   return result
 }
 

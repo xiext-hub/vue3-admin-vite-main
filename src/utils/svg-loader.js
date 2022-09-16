@@ -2,7 +2,7 @@
  *  @From https://github.com/JetBrains/svg-sprite-loader/issues/434
  *  @Better https://github.com/anncwb/vite-plugin-svg-icons
  */
-import { readFileSync, readdirSync } from 'fs'
+import {readFileSync, readdirSync} from 'fs'
 
 let idPrefix = ''
 
@@ -18,7 +18,7 @@ const clearReturn = /(\r)|(\n)/g
 function findSvgFile(dir) {
   const svgRes = []
   // 读取目标目录
-  const dirents = readdirSync(dir, { withFileTypes: true })
+  const dirents = readdirSync(dir, {withFileTypes: true})
   for (const dirent of dirents) {
     if (dirent.isDirectory()) {
       // 是目录则递归遍历目录
